@@ -6,7 +6,7 @@ require 'bundler'
 if ARGV.join(' ') =~ /spec/
   Bundler.require :default, :spec
 else
-  Bundler.require
+  Bundler.require :default, :dev
 end
 
 Motion::Project::App.setup do |app|
